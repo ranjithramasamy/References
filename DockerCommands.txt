@@ -1,0 +1,6 @@
+Useful Docker Commands:
+=======================
+https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+
+
+docker ps -a					// Check any docker container is running
