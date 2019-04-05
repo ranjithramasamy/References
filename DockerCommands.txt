@@ -4,3 +4,24 @@ https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-con
 
 
 docker ps -a					// Check any docker container is running
+docker-compose logs -f -t		// Attach a logs for all running service
+
+docker system prune --all --force --volumes		// Delete all images, volumes, containers and network
+
+
+docker stop $(docker ps -a -q)  // To stop all running containers
+docker rm $(docker ps -a -q)   // To remove all containers
+
+docker images -f dangling=true  // List dangling images
+docker rmi $(docker images -a -q)  // To remove all images
+
+
+docker volume rm $(docker volume ls -qf dangling=true)  // To remove unused volumes
+docker volume ls -qf dangling=true | xargs -r docker volume rm   // To remove unused volumes
+
+
+Docker Exec Commands:
+=====================
+docker exec -it <container name> /bin/bash  // In DEV / DEMO
+
+winpty docker exec -it platform-backend-all bash  // In local docker

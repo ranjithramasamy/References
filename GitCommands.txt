@@ -21,3 +21,15 @@ https://medium.com/flawless-app-stories/useful-git-commands-for-everyday-use-e1a
 git rev-parse --show-toplevel				// To show current physical working directory
 git config --get remote.origin.url			// To show current remote repository of branch
 git rebase -i upstream/dev					// Merge changes from remote master to forked repository
+
+// To add alias for upstream
+git remote add upstream git@github.com:risksense/platform.git
+git fetch upstream
+
+
+Remove last commit:
+===================
+
+git reset --hard HEAD^	// HEAD^ means one revision back
+
+git push origin <branch_name> --force
