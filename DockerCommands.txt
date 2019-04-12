@@ -20,8 +20,18 @@ docker volume rm $(docker volume ls -qf dangling=true)  // To remove unused volu
 docker volume ls -qf dangling=true | xargs -r docker volume rm   // To remove unused volumes
 
 
+Docker Copy Commands:
+=====================
+docker cp <source_path> <container_name>:<continer_path_to_copy>
+
+docker cp ~/logstash/config/logstash-automation-log-filter.conf logstash:/usr/share/logstash/config/
+
+
 Docker Exec Commands:
 =====================
+winpty docker exec -it --user root <container name> bash  // Login with root user
+
 docker exec -it <container name> /bin/bash  // In DEV / DEMO
 
 winpty docker exec -it platform-backend-all bash  // In local docker
+winpty docker exec -it logstash bash

@@ -1,0 +1,10 @@
+Bulk Load:
+==========
+curl -s -H "Content-Type: application/x-ndjson" -XPOST localhost:9200/_bulk --data-binary "@<json_file_name>"; echo
+
+Sample Data for Bulk API:
+=========================
+{ "index" : { "_index" : "postal-codes-tn"} }
+{"postal_id":"636301","district":"Namakkal","taluk":"Rasipuram"}
+{ "index" : { "_index" : "postal-codes-tn"} }
+{"postal_id":"674526","district":"Karur","taluk":"velur"}
