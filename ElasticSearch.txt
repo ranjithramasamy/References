@@ -2,9 +2,21 @@ Bulk Load:
 ==========
 curl -s -H "Content-Type: application/x-ndjson" -XPOST localhost:9200/_bulk --data-binary "@<json_file_name>"; echo
 
+
 Sample Data for Bulk API:
 =========================
 { "index" : { "_index" : "postal-codes-tn"} }
 {"postal_id":"636301","district":"Namakkal","taluk":"Rasipuram"}
 { "index" : { "_index" : "postal-codes-tn"} }
 {"postal_id":"674526","district":"Karur","taluk":"velur"}
+
+
+List index :: Wildcard:
+=======================
+curl -XGET http://localhost:9200/_cat/indices?v | grep staging-02.700
+
+
+Delete Index:
+=============
+curl -XDELETE http://localhost:9200/staging-02.229.*
+curl -XDELETE http://localhost:9200/demo-01.229.*

@@ -13,11 +13,14 @@ docker stop $(docker ps -a -q)  // To stop all running containers
 docker rm $(docker ps -a -q)   // To remove all containers
 
 docker images -f dangling=true  // List dangling images
-docker rmi $(docker images -a -q)  // To remove all images
+docker rmi $(docker images -a -q) -f  // To remove all images
 
 
 docker volume rm $(docker volume ls -qf dangling=true)  // To remove unused volumes
 docker volume ls -qf dangling=true | xargs -r docker volume rm   // To remove unused volumes
+
+
+docker-compose up -d --no-deps platform-elasticsearch   // Create and bring up specific container
 
 
 Docker Copy Commands:
@@ -25,6 +28,8 @@ Docker Copy Commands:
 docker cp <source_path> <container_name>:<continer_path_to_copy>
 
 docker cp ~/logstash/config/logstash-automation-log-filter.conf logstash:/usr/share/logstash/config/
+
+docker cp /d:/Ranjith.R/Projects/GitHub/RiskSense/platform/mvn/risksense-export-services/target/classes/com/risksense/util/ExportServiceUtility.class platform-backend-all:/usr/local/tomcat/webapps/export-services/WEB-INF/classes/com/risksense/util/
 
 
 Docker Exec Commands:
