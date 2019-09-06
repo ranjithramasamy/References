@@ -26,6 +26,7 @@ git rebase -i upstream/dev					// Merge changes from remote master to forked rep
 git remote add upstream git@github.com:risksense/platform.git
 git fetch upstream
 
+git checkout --track upstream/dev  // Set remote tracking branch to upstream
 
 Remove last commit:
 ===================

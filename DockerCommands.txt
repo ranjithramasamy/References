@@ -19,8 +19,12 @@ docker rmi $(docker images -a -q) -f  // To remove all images
 docker volume rm $(docker volume ls -qf dangling=true)  // To remove unused volumes
 docker volume ls -qf dangling=true | xargs -r docker volume rm   // To remove unused volumes
 
+docker volume rm <volume_name>  // To remove specific volume
+
 
 docker-compose up -d --no-deps platform-elasticsearch   // Create and bring up specific container
+
+docker-compose run platform-mysql   // To run specific container
 
 
 Docker Copy Commands:
@@ -29,7 +33,17 @@ docker cp <source_path> <container_name>:<continer_path_to_copy>
 
 docker cp ~/logstash/config/logstash-automation-log-filter.conf logstash:/usr/share/logstash/config/
 
-docker cp /d:/Ranjith.R/Projects/GitHub/RiskSense/platform/mvn/risksense-export-services/target/classes/com/risksense/util/ExportServiceUtility.class platform-backend-all:/usr/local/tomcat/webapps/export-services/WEB-INF/classes/com/risksense/util/
+docker cp /d/Ranjith.R/Projects/GitHub/RiskSense/platform/mvn/risksense-export-services/target/classes/com/risksense/util/ExportServiceUtility.class platform-backend-all:/usr/local/tomcat/webapps/export-services/WEB-INF/classes/com/risksense/util/
+
+
+docker cp platform-rest-api:/app/data_2.11-0.1.0-SNAPSHOT.jar /d/Ranjith.R/
+
+
+
+Docker Inspect Container:
+========================
+docker inspect <Container_Name>
+
 
 
 Docker Exec Commands:
@@ -40,3 +54,8 @@ docker exec -it <container name> /bin/bash  // In DEV / DEMO
 
 winpty docker exec -it platform-backend-all bash  // In local docker
 winpty docker exec -it logstash bash
+
+
+Docker Local Server Ref:
+========================
+host.docker.internal

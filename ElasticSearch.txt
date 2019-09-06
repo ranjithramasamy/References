@@ -14,9 +14,11 @@ Sample Data for Bulk API:
 List index :: Wildcard:
 =======================
 curl -XGET http://localhost:9200/_cat/indices?v | grep staging-02.700
-
+curl -XGET http://localhost:9200/_cat/indices/platform-test-automation
 
 Delete Index:
 =============
 curl -XDELETE http://localhost:9200/staging-02.229.*
 curl -XDELETE http://localhost:9200/demo-01.229.*
+
+curl -XDELETE http://localhost:9200/platform-test-automation
