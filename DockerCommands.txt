@@ -27,6 +27,13 @@ docker-compose up -d --no-deps platform-elasticsearch   // Create and bring up s
 docker-compose run platform-mysql   // To run specific container
 
 
+
+Install VIM Editor in Docker Container:
+=======================================
+apt-get update && apt-get install apt-file -y && apt-file update && apt-get install vim -y
+
+
+
 Docker Copy Commands:
 =====================
 docker cp <source_path> <container_name>:<continer_path_to_copy>
@@ -36,13 +43,23 @@ docker cp ~/logstash/config/logstash-automation-log-filter.conf logstash:/usr/sh
 docker cp /d/Ranjith.R/Projects/GitHub/RiskSense/platform/mvn/risksense-export-services/target/classes/com/risksense/util/ExportServiceUtility.class platform-backend-all:/usr/local/tomcat/webapps/export-services/WEB-INF/classes/com/risksense/util/
 
 
+docker cp /d/platform-rest-api_2.11-0.1.0-SNAPSHOT.jar platform-rest-api:/app/platform-rest-api_2.11-0.1.0-SNAPSHOT.jar
 docker cp platform-rest-api:/app/data_2.11-0.1.0-SNAPSHOT.jar /d/Ranjith.R/
+
+
+Find Folder in Linux:
+=====================
+find /. -name "logs"
+find /usr/ -name templates   // Find a folders on specfic path
+
+grep -iRl "your-text-to-find" ./  // Find a text in a file.
 
 
 
 Docker Inspect Container:
 ========================
 docker inspect <Container_Name>
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <Container_Name>   // Get IP address of a container
 
 
 

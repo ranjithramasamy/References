@@ -22,3 +22,26 @@ curl -XDELETE http://localhost:9200/staging-02.229.*
 curl -XDELETE http://localhost:9200/demo-01.229.*
 
 curl -XDELETE http://localhost:9200/platform-test-automation
+
+
+Search against document:
+=========================
+http://localhost:9210/centurylink-01.1.*.usersmodel/_search
+
+Term Query:
+===========
+
+{"query":{"bool":{"must":{"term":{"client_id.raw":"24"}}}},"from":0,"size":30,"sort":[],"aggs":{}}
+
+
+Match Query:
+============
+
+{"query":{"bool":{"must":[{"match_all":{"boost":1}},{"terms":{"username.raw":["rramasamy"],"boost":1}},{"terms":{"clientIds.raw":[766],"boost":1}}]}},"from":0,"size":30,"sort":[],"aggs":{}}
+
+
+Suggest Query:
+================
+{"size":10,"query":{"bool":{"must":[{"match_all":{"boost":1}},{"terms":{"role.raw":["Client Manager","Penetration Tester","Group Manager","User","Disabled","Technician","Manager"],"boost":1}},{"terms":{"clientIds.raw":[766],"boost":1}},{"terms":{"username.raw":["rramasamy"],"boost":1}}],"adjust_pure_negative":true,"boost":1}},"_source":false,"aggregations":{"autosuggest":{"terms":{"field":"groupNames.raw","size":10,"min_doc_count":1,"shard_min_doc_count":0,"show_term_doc_count_error":false,"order":[{"_count":"desc"},{"_key":"asc"}],"include":".*"}}}}
+
+{"size":10,"query":{"bool":{"must":[{"match_all":{"boost":1.0}},{"terms":{"role.raw":["Client Manager","Penetration Tester","Group Manager","User","Disabled","Technician","Manager"],"boost":1.0}},{"terms":{"clientIds.raw":[543],"boost":1.0}},{"terms":{"username.raw":["rramasamy"],"boost":1.0}}],"adjust_pure_negative":true,"boost":1.0}},"_source":false,"aggregations":{"autosuggest":{"terms":{"field":"groupNames.raw","size":10,"min_doc_count":1,"shard_min_doc_count":0,"show_term_doc_count_error":false,"order":[{"_count":"desc"},{"_key":"asc"}],"include":".*"}}}}
