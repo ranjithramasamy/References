@@ -24,6 +24,11 @@ curl -XDELETE http://localhost:9200/demo-01.229.*
 curl -XDELETE http://localhost:9200/platform-test-automation
 
 
+Check Cluster Health:
+=====================
+curl -XGET localhost:9200/_cluster/health/
+
+
 Search against document:
 =========================
 http://localhost:9210/centurylink-01.1.*.usersmodel/_search

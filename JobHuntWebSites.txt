@@ -1,0 +1,83 @@
+Want a job as a Freelance Dev:
+===============================
+Freelancer: http://freelancer.com/jobs
+Upwork: http://upwork.com
+FlexJobs: http://flexjobs.com/jobs
+FreelancerMap: http://freelancermap.com
+http://Gun.io: http://gun.io
+Guru: http://guru.com/d/jobs
+
+
+Want a startup job:
+====================
+AngelList: http://angel.co/jobs
+Product Hunt: http://producthunt.com/jobs
+Startup Hire: http://startuphire.com
+Startupers: http://startupers.com
+YCombinator: http://news.ycombinator.com/jobs
+
+
+Job Hunt by Technology:
+=======================
+iOS: http://iosdevjobs.com
+React: http://reactjobboard.com
+Vue jobs: http://vuejobs.com
+Ember: http://jobs.emberjs.com
+Python Jobs - http://python.org/jobs
+
+
+Want a list of just JavaScript developer jobs:
+==============================================
+JavaScript job XYZ: http://javascriptjob.xyz
+Javascript remotely: http://jsremotely.com
+
+
+Most popular sites to job hunt:
+===============================
+AngelList - https://angel.co
+GitHub: http://jobs.github.com
+Mashable: https://lnkd.in/g5qAAkM
+Indeed: http://indeed.com
+StackOverflow: https://lnkd.in/gufS-bs
+LinkedIn: http://linkedIn.com
+Glassdoor: http://glassdoor.com
+Dice: http://dice.com
+Monster: http://monster.com
+Simply Hired: http://simplyhired.com
+Toptal: https://toptal.com
+Hired - https://hired.com
+
+
+Best places to job hunt for remote jobs:
+========================================
+FlexJobs: http://flexjobs.com
+WeWorkRemotely: http://weworkremotely.com
+RemoteOk: https://lnkd.in/gaS4M7b
+Stackoverflow: https://lnkd.in/gwZDbVi
+Working Nomads: https://lnkd.in/ggmZRgC
+Remote.co - https://lnkd.in/gMTCffT
+Remoters: https://lnkd.in/g5VmmQd
+JS Remotely: http://jsremotely.com
+Front-end remote: https://lnkd.in/ghhSP8z
+IWantRemote: http://iwantremote.com
+DailyRemote - https://dailyremote.com
+Remotive: https://lnkd.in/gPa33mN
+Outsourcely: http://outsourcely.com/remote-web-development-jobs…
+Pangian: https://pangian.com/job-travel-remote/…
+RemoteLeads: http://remoteleads.io
+Remote Talent: http://remotetalent.co/jobs
+JustRemote: https://justremote.co/remote-developer-jobs…
+RemoteLeaf - https://remoteleaf.com
+Sitepoint - https://sitepoint.com/jobs/
+
+
+Are you looking for a junior dev job:
+=====================================
+JrDevJobs: http://jrdevjobs.com
+Stackoverflow Junior jobs: https://stackoverflow.com/jobs/junior-developer-jobs
+
+
+Women-focused job boards:
+=========================
+Women Who Code: http://womenwhocode.com/jobs
+Tech Ladies - https://hiretechladies.com

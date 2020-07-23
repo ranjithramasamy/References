@@ -28,9 +28,19 @@ git fetch upstream
 
 git checkout --track upstream/dev  // Set remote tracking branch to upstream
 
+git branch | grep -v "master" | xargs git branch -D   // Remove all local branches
+
+
 Remove last commit:
 ===================
 
 git reset --hard HEAD^	// HEAD^ means one revision back
 
 git push origin <branch_name> --force
+
+
+Reset forced push Commits:
+==========================
+git reflog  // To see log history
+
+git reset --hard <Commit_Id> // Pick appropriate commit id from above history logs
