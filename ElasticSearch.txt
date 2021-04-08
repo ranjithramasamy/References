@@ -24,14 +24,31 @@ curl -XDELETE http://localhost:9200/demo-01.229.*
 curl -XDELETE http://localhost:9200/platform-test-automation
 
 
+To fix Max shards Open issue in Elasticsearch:
+==============================================
+To Delete all indexes:
+	curl -XDELETE http://localhost:9200/demo-01.229.*
+	
+To revert indices read-only mode:
+	curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}
+
+
 Check Cluster Health:
 =====================
 curl -XGET localhost:9200/_cluster/health/
 
 
+Search:
+=======
+GET:  http://localhost:9501/demo-01.*.workflowbatchmodel/_search
+
+
 Search against document:
 =========================
-http://localhost:9210/centurylink-01.1.*.usersmodel/_search
+POST:  http://localhost:9210/centurylink-01.1.*.usersmodel/_search
+
+POST:  http://localhost:9501/demo-01.518.1606531858704.applicationurlvulnmodel/_search
+
 
 Term Query:
 ===========

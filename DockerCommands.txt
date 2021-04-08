@@ -32,6 +32,7 @@ Install VIM Editor in Docker Container:
 =======================================
 apt-get update && apt-get install apt-file -y && apt-file update && apt-get install vim -y
 
+apt-get install vim -y
 
 
 Docker Copy Commands:
@@ -76,3 +77,20 @@ winpty docker exec -it logstash bash
 Docker Local Server Ref:
 ========================
 host.docker.internal
+
+
+Kafka command to check messages:
+================================
+docker exec platform-kafka /opt/kafka/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group RecatClientGroup
+docker exec platform-kafka /opt/kafka/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group ReindexRecordGroup
+docker exec platform-kafka /opt/kafka/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group ReindexProcessGroup
+docker exec platform-kafka /opt/kafka/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group ReindexProcessBatchGroup
+docker exec platform-kafka /opt/kafka/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group ElasticSearchSinkGroup
+docker exec platform-kafka /opt/kafka/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group group_consumer
+docker exec platform-kafka /opt/kafka/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
+docker exec platform-kafka /opt/kafka/bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic ReindexProcess
+docker exec platform-kafka /opt/kafka/bin/kafka-topics.sh --zookeeper 172.18.0.3:2181 --alter --topic ReindexBatchProcess --partitions 125
+
+/opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic ReindexProcess -new-consumer
+/opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TableToEs -new-consumer
+/opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic job_trigger -new-consumer

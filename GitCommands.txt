@@ -22,14 +22,23 @@ git rev-parse --show-toplevel				// To show current physical working directory
 git config --get remote.origin.url			// To show current remote repository of branch
 git rebase -i upstream/dev					// Merge changes from remote master to forked repository
 
+
+git clean -df								// Remove untracked files
+
+
 // To add alias for upstream
 git remote add upstream git@github.com:risksense/platform.git
 git fetch upstream
+
+
+// Remove remote alias from local
+git remote rm <remote_alias_name>
 
 git checkout --track upstream/dev  // Set remote tracking branch to upstream
 
 git branch | grep -v "master" | xargs git branch -D   // Remove all local branches
 
+git push origin --delete feature/login   // Remove remote branch
 
 Remove last commit:
 ===================

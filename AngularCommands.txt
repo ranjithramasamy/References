@@ -1,0 +1,3 @@
+Angular CLI:
+============
+ng g c home --module app  	// Create new components inside "app" folder
